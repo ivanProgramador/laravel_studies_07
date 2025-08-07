@@ -1,0 +1,12 @@
+Autenticação tem como objetivo identificar o usuario.
+  Essa é uma etapa muito importante para qualquer sistema qque precise de um nivel minimo de segurança,
+  a ideia aqui e saber qquam esta logando na tela principal as perguntas qque devem ser respondidas antes,
+  da entrada no sistema são: 
+
+  1 - qual éo nome do usuario ?
+  2 - qual e a senha dele ? 
+  3 - qual é o cargo desse usuario ?
+  4 - quando ele foi cadastrado ?
+
+  de inicio parecem perguntas simples, mas se o seu sistema conseguir responder essas perguntas, para o administrador,
+  significa qua o sistema de autenticação está funcionando normalmente.           
