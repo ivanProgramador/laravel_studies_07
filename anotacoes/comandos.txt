@@ -1,0 +1,25 @@
+comandos pra instalar o breeze
+
+1-trazendo as dependecias do breeze pra dentro do projeto  
+
+   composer require laravel/breeze
+
+2 - aplicando o comando de instalação
+
+   php artisan breeze:install
+
+3 - escolher a bliblioteca visual de controle 
+   
+   eu escohi o blade
+
+4 -Escolher se ele vai ter a funcionalidade dar mode 
+
+   eu disse que não 
+
+5 - escolher libs de penteste
+
+   eu coloquei 0 porque não quero fazer issso agora 
+
+ 
+    
+  

@@ -1,0 +1,18 @@
+O laravel tem bibliotecas associadas para acelerara o processso de criação de sistemas, que 
+não vem instaldas por padrão mas podem ser adicionadas, no contexto desse projeto eu tenho duas 
+opções bibiliotecas Jetstream e Breeze para implementar um sistema completo de autenticação de 
+usuarios onde eu tenho a minha disposição 
+
+1 - tela de login 
+2 - crud de usuarios
+3 - rotas e midwares de autenticação 
+
+como o objetivo desse porjeto e explorar o Breeze então ele será escolhido, como o Jetstream,
+ass rotas dele podem ser integradas com bibliotecas reativas de JS, como: 
+-Vue 
+-React 
+
+entre outras  porque nesse caso oque vai importar e o modo como esses sistemas vão interagir com 
+as rotas, mas eu vou usar o Blade mesmo para simplificar o processo   
+
+https://laravel.com/docs/12.x/starter-kits
