@@ -20,6 +20,14 @@ comandos pra instalar o breeze
 
    eu coloquei 0 porque não quero fazer issso agora 
 
+6 - seed o laravel cria um seed com uma usuario padrao para salvar 
+    na base de dados e eo comando abaixo executa esse seed,,salvando o usuario na base de dados    
+  
+   php artisan db:seed --class=DatabaseSeeder
+
+   ----------------------------------------------------------
+    
+   ----------------------------------------------------------
  
     
   
