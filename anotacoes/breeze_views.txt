@@ -1,0 +1,12 @@
+dentro da pasta views ele divide as tela dele em 4 tipos
+
+  auth (telas de confirmalção de senha, login, registro, verificação de emial e reset de senha)
+  layouts( são views base que importam as bibliotecas )
+  profile (telas relacionadas ao controle de perfil de usuario)
+  components(são listas,logo,botoes e dropdows)
+
+é importante saber onde essas views ficam para poder altera-las conforme as necessidades do sistema
+sempre ter atenção qquando mexer nessas views para não alterar nomes dde variveis que podem afetar 
+o funcionamento do breeze 
+
+

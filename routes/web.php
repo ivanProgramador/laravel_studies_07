@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,5 +17,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//minhas rotas 
+Route::middleware('auth')->group(function(){
+     Route::get('/nova_pagina',[MainController::class,'nova_pagina'])->name('nova_pagina');
+});
+
 
 require __DIR__.'/auth.php';

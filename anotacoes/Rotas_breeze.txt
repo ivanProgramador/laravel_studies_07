@@ -1,0 +1,24 @@
+A instalação do breeze gera 21 rotas 
+  Por se tratar de um sistema completo de autenticação ele vem com rotas para formularios 
+  de criação e controle de contas e rotas para as funcionanlidades responsaveis por esses
+  sistemas.
+
+  Aqui estão algumas delas orestante estão dentro do arquivo auth.php para pode usa-las 
+  ele importa esse aquivo para dentro do web.php  dessa forma 'require __DIR__.'/auth.php';'
+       
+
+  Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->middleware(['auth', 'verified'])->name('dashboard');
+
+   Route::middleware('auth')->group(function () {
+     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+   });
+
+   Saber onde essas rotas ficam é importante porque caso precise adicionar uma rota ou funcionanlidades 
+   que o breeze não tem basta criar uma nova rota e um novo metodo no controller dele.
+   
+    
+

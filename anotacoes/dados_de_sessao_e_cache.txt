@@ -1,0 +1,15 @@
+Esses dados podem ficar salavops na propria base de dados ou no file sistem,
+para configurar isso é necessário ir no '.env' por padrão vai estar como database.
+
+  SESSION_DRIVER=database
+  CACHE_STORE=database
+  
+se eu quiser colocar em um arquivo
+
+    SESSION_DRIVER=file 
+    CACHE_STORE=file
+
+
+
+
+    

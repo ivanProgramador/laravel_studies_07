@@ -1,0 +1,56 @@
+primeiro eu crio um controller 
+   php artisan make:controller MainController
+Dentro do controller eu crio um metodo que retorna a minha pagina
+
+
+class MainController extends Controller
+{
+    public function index():View
+    {
+        return view('nova_pagina'); 
+    }
+}
+
+criando a view 
+
+php artisan make:view nova_pagina
+
+---------------------------------------------------------------------
+depois de criar a view eu copiei oque tinha dentro da view dasboard e mudei um pouso a parte visual
+----------------------------------------------------------------------
+
+No caso para que as minhas rota possam ussar o ssistema de autenticação elas precisam estar,
+sob o controlle do middleware 'auth' e eu coloquei ela tamebm em um grupo separado para não ter
+risco de afetar nada do breeze 
+
+submetendo ela ao middleware route significa que o cliente sso pode acesssar se estiver logado 
+
+//minhas rotas 
+Route::middleware('auth')->group(function(){
+     Route::get('/nova_pagina',[MainController::class,'nova_pagina'])->name('nova_pagina');
+});
+
+-------------------------------------------------------------------------------------
+Adicionando a minha rota na dashboard 
+ 1- eu tenho achar o componente da barra de navegação
+      navigation.blade.php
+ 2- dentro dela tem um componente que eo link parar a dashboard  
+
+    -----------------------------------------------------------------------------------
+     
+              
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+              
+    ---------------------------------------------------------------------------------
+      
+ 3- eu vou duplicar e no lugar do nome 'dashboard'  eu coloco o nome da minha rota 
+    atenção tem que mudar o titulo tambem 
+
+     <x-nav-link :href="route('nova_pagina')" :active="request()->routeIs('nova_pagina')">
+                        {{ __('Dashboard') }}
+     </x-nav-link>
+   
+
+   

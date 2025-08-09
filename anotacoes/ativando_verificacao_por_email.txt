@@ -1,0 +1,43 @@
+para fazer isso tem que acessar o model user qque tem uma linha comentada 
+  
+  use Illuminate\Contracts\Auth\MustVerifyEmail; 
+
+ao remover as barras de comentario essa importação ficara ativa 
+depois configurar ela pra ser implementada na classe 
+
+assinatura classe normal
+-----------------------------------------------------------
+ class User extends Authenticatable{}
+
+
+depois da implementação 
+--------------------------------------------------------
+class User extends Authenticatable implements MustVerifyEmail {}
+
+
+depis de fazer esse dois passos um cliente de emial deve ser definido no .env 
+nessse caso se sair um emial do sistema isso ficara registrado no log 
+
+--------------------------------------------------
+MAIL_MAILER=log
+
+---------------------------------------------------------------------
+Depois de fazer isso todo o cliente que logar recebera um emial de confirmação sendo 
+que o sistema so vai deixar ele passsar para a dashboard depoiss de confirmar o emial.
+--------------------------------------------------------------------------------------------
+
+
+para achar esse link que o cliente vai receber no emial basta verificar o log 
+
+http://localhost/laravel_studies_07/public/verify-email/4/2600a29dacc58cc813510e7fcd3c554b2a20fce8?expires=1754712353&signature=e17b83dd31a4b2f473f3397bb3aa3c8a4b1f1fac4909230a0ba9a8d481325c2e
+
+so que temos um problema grave de segurança onde esse link mostra o id do cliente 
+mas no caso pode ser feito uma funcção alternativa para criptografar esse dado ja que o 
+breeze aceita alterações 
+
+
+
+
+
+
+

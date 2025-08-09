@@ -7,7 +7,7 @@ usuarios onde eu tenho a minha disposição
 2 - crud de usuarios
 3 - rotas e midwares de autenticação 
 
-como o objetivo desse porjeto e explorar o Breeze então ele será escolhido, como o Jetstream,
+como o objetivo desse projeto e explorar o Breeze então ele será escolhido, como o Jetstream,
 ass rotas dele podem ser integradas com bibliotecas reativas de JS, como: 
 -Vue 
 -React 

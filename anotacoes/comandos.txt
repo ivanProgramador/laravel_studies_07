@@ -18,16 +18,33 @@ comandos pra instalar o breeze
 
 5 - escolher libs de penteste
 
-   eu coloquei 0 porque não quero fazer issso agora 
+   eu coloquei 0 porque não quero fazer isso agora 
 
 6 - seed o laravel cria um seed com uma usuario padrao para salvar 
-    na base de dados e eo comando abaixo executa esse seed,,salvando o usuario na base de dados    
+    na base de dados e eo comando abaixo executa esse seed,salvando o usuario na base de dados    
   
    php artisan db:seed --class=DatabaseSeeder
 
-   ----------------------------------------------------------
-    
-   ----------------------------------------------------------
+Possiveis problemas 
+1- o laravel sempre vai procurar uma a tabela chamada sessions  então se  
+   o banco não tiver essa tabela ele vai dar erro, pra cirar ela basta rodar as migrations
+
+2- se o laravel breeze for corrtamente insstalado vão aparecer 2 links na apgina principal
+    1 - login 
+    2 - register
+   se clicar em um deles e o formulario não aparecer é porque eles dependen de js para rodar 
+   então execute o comando npm run dev, no meu caso coloquei dentro do htdocs, então ele esta 
+   rodando normalmente como aocntceria em um servidor comum.
+
+3 - a senha criada no seeder, naão precisa criptografar o breeze ja faz isso então se voce fizer isso
+    vai corromper totalmente o texto e não vai conseguir entrar.     
+
+          User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' =>'admin'
+        ]);
+
  
     
   
